@@ -29,15 +29,101 @@ Step 7: Save and run the application.
 ```
 /*
 Program to print the text “Hello World”.
-Developed by:
-Registeration Number :
+Developed by:SUVVARI LAKSHMANA RAO
+Registeration Number :212221040168
 */
 ```
+#ACTIVITY_MAIN.XML:
+```
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Bombastic"
+        tools:targetApi="31">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
+```
+#MAINACTIVITY.JAVA:
+```
+package com.example.bombastic;
+
+import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
+import android.widget.Toast;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        Toast toast = Toast.makeText(getApplicationContext(), "onCreate Called", Toast.LENGTH_LONG);
+        toast.show();
+    }
+
+    protected void onStart() {
+        super.onStart();
+        Toast toast = Toast.makeText(getApplicationContext(), "onStart Called", Toast.LENGTH_LONG);
+        toast.show();
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Toast toast = Toast.makeText(getApplicationContext(), "onRestart Called", Toast.LENGTH_LONG);
+        toast.show();
+    }
+
+    protected void onPause() {
+        super.onPause();
+        Toast toast = Toast.makeText(getApplicationContext(), "onPause Called", Toast.LENGTH_LONG);
+        toast.show();
+    }
+
+    protected void onResume() {
+        super.onResume();
+        Toast toast = Toast.makeText(getApplicationContext(), "onResume Called", Toast.LENGTH_LONG);
+        toast.show();
+    }
+
+    protected void onStop() {
+        super.onStop();
+        Toast toast = Toast.makeText(getApplicationContext(), "onStop Called", Toast.LENGTH_LONG);
+        toast.show();
+    }
+
+    protected void onDestroy() {
+        super.onDestroy();
+        Toast toast = Toast.makeText(getApplicationContext(), "onDestroy Called", Toast.LENGTH_LONG);
+        toast.show();
+    }
+}
+```
 ## OUTPUT
-
-
-
-
+![image](https://github.com/lakshman1206/lifecyclemethods/assets/129931784/0fbeb7bb-0e66-43bb-b96c-d9613407082e)
+![image](https://github.com/lakshman1206/lifecyclemethods/assets/129931784/7cdccf99-3f04-4afd-9c21-5fab9ba31af1)
+![image](https://github.com/lakshman1206/lifecyclemethods/assets/129931784/822b1462-91fb-4446-9ff3-03c57cb11a82)
+![image](https://github.com/lakshman1206/lifecyclemethods/assets/129931784/eaa02be2-6902-49d6-a5ad-1c44f2453723)
+![image](https://github.com/lakshman1206/lifecyclemethods/assets/129931784/28866f8b-2747-45ba-84ab-ae956a8d3f1e)
+![image](https://github.com/lakshman1206/lifecyclemethods/assets/129931784/f224096c-9742-4301-a909-0ab5cc4cde4b)
 ## RESULT
 Thus a Simple Android Application create a HelloWorld Activity using all lifecycles methods to display messages using Android Studio is developed and executed successfully.
